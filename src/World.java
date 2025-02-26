@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,4 +31,17 @@ public class World {
         reader.close();
     }
 
+    public void saveWorld(String filename) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
+
+        for (Room room : rooms.values()) {
+            writer.write(room.name + "," +
+                    (room.getExit("north") != null ? room.getExit("north").name : "") + "," +
+                    (room.getExit("south") != null ? room.getExit("south").name : "") + "," +
+                    (room.getExit("east") != null ? room.getExit("east").name : "") + "," +
+                    (room.getExit("west") != null ? room.getExit("west").name : "") + "\n");
+        }
+
+        writer.close();
+    }
 }
