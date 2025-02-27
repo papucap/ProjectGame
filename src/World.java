@@ -18,23 +18,23 @@ public class World {
 
             if (parts.length > 1 && !parts[1].trim().isEmpty()) {
                 String northRoom = parts[1].trim();
-                Room north = rooms.computeIfAbsent(northRoom, k -> new Room(k));
-                room.setExit("north", north);
+                Room sever = rooms.computeIfAbsent(northRoom, k -> new Room(k));
+                room.setExit("sever", sever);
             }
             if (parts.length > 2 && !parts[2].trim().isEmpty()) {
                 String southRoom = parts[2].trim();
-                Room south = rooms.computeIfAbsent(southRoom, k -> new Room(k));
-                room.setExit("south", south);
+                Room jih = rooms.computeIfAbsent(southRoom, k -> new Room(k));
+                room.setExit("jih", jih);
             }
             if (parts.length > 3 && !parts[3].trim().isEmpty()) {
                 String eastRoom = parts[3].trim();
-                Room east = rooms.computeIfAbsent(eastRoom, k -> new Room(k));
-                room.setExit("east", east);
+                Room vychod = rooms.computeIfAbsent(eastRoom, k -> new Room(k));
+                room.setExit("vychod", vychod);
             }
             if (parts.length > 4 && !parts[4].trim().isEmpty()) {
                 String westRoom = parts[4].trim();
-                Room west = rooms.computeIfAbsent(westRoom, k -> new Room(k));
-                room.setExit("west", west);
+                Room zapad = rooms.computeIfAbsent(westRoom, k -> new Room(k));
+                room.setExit("zapad", zapad);
             }
         }
         reader.close();
@@ -43,12 +43,12 @@ public class World {
     public void saveWorld(String filename) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
         for (Room room : rooms.values()) {
-            String north = (room.getExit("north") != null) ? room.getExit("north").name : "";
-            String south = (room.getExit("south") != null) ? room.getExit("south").name : "";
-            String east = (room.getExit("east") != null) ? room.getExit("east").name : "";
-            String west = (room.getExit("west") != null) ? room.getExit("west").name : "";
+            String sever = (room.getExit("sever") != null) ? room.getExit("sever").name : "";
+            String jih = (room.getExit("jih") != null) ? room.getExit("jih").name : "";
+            String vychod = (room.getExit("vychod") != null) ? room.getExit("vychod").name : "";
+            String zapad = (room.getExit("zapad") != null) ? room.getExit("zapad").name : "";
 
-            writer.write(room.name + "," + north + "," + south + "," + east + "," + west);
+            writer.write(room.name + "," + sever + "," + jih + "," + vychod + "," + zapad);
             writer.newLine();
         }
         writer.close();

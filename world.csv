@@ -1,6 +1,6 @@
 Radniční náměstí,Muzeum,Bazilika,,
-Muzeum,Radniční náměstí,,Hradby,Krypta
-Hradby,Kúpele,,Muzeum,
+Muzeum,,Radniční náměstí,Hradby,Krypta
+Hradby,Kúpele,,,Muzeum
 Kúpele,,Hradby,,
 Krypta,,,Muzeum,
 Bazilika,Radniční náměstí,Měšťanské Domy,,
