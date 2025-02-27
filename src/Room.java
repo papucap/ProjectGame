@@ -17,10 +17,4 @@ public class Room {
     public Room getExit(String direction) {
         return exits.get(direction);
     }
-
-    public void printExits() {
-        for (Map.Entry<String, Room> entry : exits.entrySet()) {
-            System.out.println(entry.getKey() + " -> " + entry.getValue().name);
-        }
-    }
 }
