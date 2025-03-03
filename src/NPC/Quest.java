@@ -1,3 +1,5 @@
+package NPC;
+
 public class Quest {
     private String description;
 

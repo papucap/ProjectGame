@@ -1,3 +1,5 @@
+package Items;
+
 public class PickItem {
     private Inventory inventory;
     private Item item;

@@ -1,3 +1,6 @@
+import Items.Item;
+import NPC.NPC;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
