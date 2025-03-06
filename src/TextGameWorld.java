@@ -1,7 +1,11 @@
+import Game.Movement;
+
 public class TextGameWorld {
     public static void main(String[] args) {
         Movement m = new Movement();
-        m.movement();
+        Console c = new Console();
+       // m.movement();
+        c.start();
     }
 }
 

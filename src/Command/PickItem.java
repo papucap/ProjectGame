@@ -1,4 +1,7 @@
-package Items;
+package Command;
+
+import Items.Inventory;
+import Items.Item;
 
 public class PickItem {
     private Inventory inventory;

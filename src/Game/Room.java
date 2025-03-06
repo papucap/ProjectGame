@@ -1,3 +1,5 @@
+package Game;
+
 import Items.Item;
 import NPC.NPC;
 
@@ -39,4 +41,5 @@ public class Room {
     public void interactNPC() {
 
     }
+
 }
