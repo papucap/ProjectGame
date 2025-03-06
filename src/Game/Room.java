@@ -2,12 +2,12 @@ package Game;
 
 import Items.Item;
 import NPC.NPC;
+import NPC.Quest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
-
 
 public class Room {
     String name;
@@ -38,8 +38,20 @@ public class Room {
         items.add(item);
     }
 
-    public void interactNPC() {
-
+    public void interactNPCs() {
+        for (NPC npc : npcs) {
+            npc.interact();
+        }
     }
 
+    public void describeRoom() {
+        System.out.println("Nacházíš se v: " + name);
+        if (!npcs.isEmpty()) {
+            System.out.println("V této lokaci jsou následující postavy:");
+            for (NPC npc : npcs) {
+                System.out.println("- " + npc.getName() + ": " + npc.getQuestDescription());
+            }
+        }
+    }
 }
+

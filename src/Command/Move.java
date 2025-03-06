@@ -7,6 +7,7 @@ public class Move implements Command{
     Movement m = new Movement();
     public String execute() {
         m.movement();
+
         return "";
     }
 

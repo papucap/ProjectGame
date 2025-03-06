@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Movement {
     private World world;
     private Room currentRoom;
-    private boolean firstMove = true; // Kontrola, aby se "Movement" zobrazil jen jednou
+    private boolean firstMove = true;
+
 
     public Movement() {
         try {
@@ -31,6 +32,7 @@ public class Movement {
 
         if (firstMove) {
             System.out.println("Vítej ve světě! Nacházíš se v místnosti: " + currentRoom.name);
+            currentRoom.describeRoom();
             firstMove = false;
         }
 
@@ -47,6 +49,7 @@ public class Movement {
         if (nextRoom != null) {
             currentRoom = nextRoom;
             System.out.println("Přesunul ses do místnosti: " + currentRoom.name);
+            currentRoom.describeRoom();
         } else {
             System.out.println("Tam se jít nedá!");
         }

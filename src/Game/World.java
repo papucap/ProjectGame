@@ -3,6 +3,8 @@ package Game;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+import NPC.NPC;
+import NPC.Quest;
 
 public class World {
     Map<String, Room> rooms = new HashMap<>();
@@ -40,19 +42,12 @@ public class World {
             }
         }
         reader.close();
-    }
 
-    public void saveWorld(String filename) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter(filename));
-        for (Room room : rooms.values()) {
-            String sever = (room.getExit("sever") != null) ? room.getExit("sever").name : "";
-            String jih = (room.getExit("jih") != null) ? room.getExit("jih").name : "";
-            String vychod = (room.getExit("vychod") != null) ? room.getExit("vychod").name : "";
-            String zapad = (room.getExit("zapad") != null) ? room.getExit("zapad").name : "";
-
-            writer.write(room.name + "," + sever + "," + jih + "," + vychod + "," + zapad);
-            writer.newLine();
-        }
-        writer.close();
+        rooms.get("Muzeum").addNPC(new NPC("Starý kronikář", new Quest("Potřebuje donést zlatý prsten")));
+        rooms.get("Hradby").addNPC(new NPC("Místní obchodník", new Quest("Dones mi prosím Medailon")));
+        rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("Bez se podívat do židovského suburbia")));
+        rooms.get("Židovské Suburbium").addNPC(new NPC("Archeolog", new Quest("Ahoj tady máš krabici, tu dones nějakému cizincovi")));
+        rooms.get("Měšťanské Domy").addNPC(new NPC("Tajemný cizinec", new Quest("Dones mi Krabici")));
     }
 }
+
