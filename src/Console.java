@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class Console {
     private boolean exit = false;
     private HashMap<String, Command> map = new HashMap<>();
-    Movement m = new Movement();
 
     public void inicialization(){
         map.put("exit", new Quit());
@@ -18,13 +17,12 @@ public class Console {
     private Scanner scanner = new Scanner(System.in);
 
     public void doCommand(){
-        //m.movement();
         System.out.print(">>");
         String command = scanner.nextLine();
         command = command.trim();
         command = command.toLowerCase();
         if(map.containsKey(command)){
-            System.out.println(">> "+map.get(command).execute());
+            System.out.println(""+map.get(command).execute());
         }else{
             System.out.println(">> Nondefined command");
         }
