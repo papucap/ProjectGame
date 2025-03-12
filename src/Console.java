@@ -1,6 +1,7 @@
 
 import Command.*;
 import Game.Movement;
+import Items.Inventory;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -8,10 +9,12 @@ import java.util.Scanner;
 public class Console {
     private boolean exit = false;
     private HashMap<String, Command> map = new HashMap<>();
+    private Inventory inventory;
 
     public void inicialization(){
         map.put("exit", new Quit());
         map.put("pohyb", new Move());
+        map.put("inventar", new ShowInventory(inventory));
     }
 
     private Scanner scanner = new Scanner(System.in);

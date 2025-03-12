@@ -3,6 +3,8 @@ package Game;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
+
+import Items.Item;
 import NPC.NPC;
 import NPC.Quest;
 
@@ -19,6 +21,18 @@ public class World {
 
             String roomName = parts[0].trim();
             Room room = rooms.computeIfAbsent(roomName, k -> new Room(k));
+
+            if (roomName.equals("Radniční náměstí")) {
+                room.addItem(new Item("Mapka"));
+            } else if (roomName.equals("Muzeum")) {
+                room.addItem(new Item("Zlatý prsten"));
+            } else if (roomName.equals("Hradby")) {
+                room.addItem(new Item("Meč"));
+            } else if (roomName.equals("Krypta")) {
+                room.addItem(new Item("Starý klíč"));
+            } else if (roomName.equals("Měšťanské Domy")) {
+                room.addItem(new Item("Kniha"));
+            }
 
             if (parts.length > 1 && !parts[1].trim().isEmpty()) {
                 String northRoom = parts[1].trim();
@@ -48,6 +62,8 @@ public class World {
         rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("Bez se podívat do židovského suburbia")));
         rooms.get("Židovské Suburbium").addNPC(new NPC("Archeolog", new Quest("Ahoj tady máš krabici, tu dones nějakému cizincovi")));
         rooms.get("Měšťanské Domy").addNPC(new NPC("Tajemný cizinec", new Quest("Dones mi Krabici")));
+
+
     }
 }
 
