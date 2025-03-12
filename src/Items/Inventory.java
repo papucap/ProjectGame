@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Inventory {
-    private List<Item> items = new ArrayList<>();
+    public List<Item> items = new ArrayList<>();
     private final int MAX_ITEMS = 3;
 
     public boolean addItem(Item item) {

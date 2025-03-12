@@ -1,7 +1,7 @@
 package Items;
 
 public class Item {
-    String name;
+    public String name;
 
     public Item(String name) {
         this.name = name;
