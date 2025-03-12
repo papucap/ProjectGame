@@ -1,8 +1,8 @@
-Radniční náměstí,Muzeum,Bazilika,,
-Muzeum,,Radniční náměstí,Hradby,Krypta
-Hradby,Kúpele,,,Muzeum
+Radniční náměstí,Muzeum,Bazilika,,,Mapka
+Muzeum,,Radniční náměstí,Hradby,Krypta,Kniha
+Hradby,Kúpele,,,Muzeum,Mec
 Kúpele,,Hradby,,
-Krypta,,,Muzeum,
+Krypta,,,Muzeum,,Prsten
 Bazilika,Radniční náměstí,Měšťanské Domy,,
 Měšťanské Domy,Bazilika,Židovské Suburbium,,
-Židovské Suburbium,Měšťanské Domy,,,
+Židovské Suburbium,Měšťanské Domy,,,,Klic

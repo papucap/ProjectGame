@@ -3,10 +3,14 @@ import Game.*;
 
 
 public class Move implements Command{
+    private Movement movement;
 
-    Movement m = new Movement();
+    public Move(Movement movement) {
+        this.movement = movement;
+    }
+
     public String execute() {
-        m.movement();
+        movement.movement();
 
         return "";
     }

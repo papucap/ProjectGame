@@ -1,6 +1,6 @@
+package Game;
 
 import Command.*;
-import Game.Movement;
 import Items.Inventory;
 
 import java.util.HashMap;
@@ -10,11 +10,18 @@ public class Console {
     private boolean exit = false;
     private HashMap<String, Command> map = new HashMap<>();
     private Inventory inventory;
+    private Movement movement;
+
+    public Console(Inventory inventory, Movement movement) {
+        this.inventory = inventory;
+        this.movement = movement;
+    }
 
     public void inicialization(){
         map.put("exit", new Quit());
-        map.put("pohyb", new Move());
+        map.put("pohyb", new Move(movement));
         map.put("inventar", new ShowInventory(inventory));
+        map.put("vezmi", new PickItem(inventory, movement));
     }
 
     private Scanner scanner = new Scanner(System.in);
@@ -42,5 +49,10 @@ public class Console {
             System.out.println(e.getMessage());
         }
     }
+
+    public Room getCurrentRoom() {
+        return movement.getCurrentRoom();
+    }
+
 
 }

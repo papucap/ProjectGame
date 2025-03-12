@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Movement {
     private World world;
     private Room currentRoom;
+
     private boolean firstMove = true;
 
 
@@ -41,7 +42,7 @@ public class Movement {
         String direction = scanner.nextLine().trim().toLowerCase();
 
         if (direction.equals("exit")) {
-            System.out.println("Ukončuji hru.");
+            System.out.println(" ");
             return;
         }
 
@@ -54,4 +55,9 @@ public class Movement {
             System.out.println("Tam se jít nedá!");
         }
     }
+    public Room getCurrentRoom(){
+        return currentRoom;
+    } 
+    
 }
+

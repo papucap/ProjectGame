@@ -2,24 +2,24 @@ package Game;
 
 import Items.Item;
 import NPC.NPC;
-import NPC.Quest;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 
 public class Room {
-    String name;
+    public String name;
     Map<String, Room> exits;
     List<NPC> npcs;
-    List<Item> items;
+    public List<Item> items; // Seznam itemů v místnosti
 
     public Room(String name) {
         this.name = name;
         this.exits = new HashMap<>();
         this.npcs = new ArrayList<>();
-        this.items = new ArrayList<>();
+        this.items = new ArrayList<>(); // Inicializace seznamu itemů
     }
 
     public void setExit(String direction, Room room) {
@@ -35,14 +35,14 @@ public class Room {
     }
 
     public void addItem(Item item) {
-        items.add(item);
+        items.add(item); // Přidání itemu do místnosti
     }
 
-    public void interactNPCs() {
-        for (NPC npc : npcs) {
-            npc.interact();
-        }
+    public boolean removeItem(Item item) {
+        return items.remove(item); // Odebrání itemu z místnosti
     }
+
+
 
     public void describeRoom() {
         System.out.println("Nacházíš se v: " + name);
@@ -50,6 +50,12 @@ public class Room {
             System.out.println("V této lokaci jsou následující postavy:");
             for (NPC npc : npcs) {
                 System.out.println("- " + npc.getName() + ": " + npc.getQuestDescription());
+            }
+        }
+        if (!items.isEmpty()) {
+            System.out.println("V této místnosti jsou následující itemy:");
+            for (Item item : items) {
+                System.out.println("- " + item);
             }
         }
     }

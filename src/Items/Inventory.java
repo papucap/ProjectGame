@@ -1,7 +1,7 @@
 package Items;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Inventory {
     private List<Item> items = new ArrayList<>();

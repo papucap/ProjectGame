@@ -1,7 +1,6 @@
 package Items;
 
 public class Item {
-
     String name;
 
     public Item(String name) {

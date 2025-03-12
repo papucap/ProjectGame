@@ -21,7 +21,7 @@ public class World {
 
             String roomName = parts[0].trim();
             Room room = rooms.computeIfAbsent(roomName, k -> new Room(k));
-
+/*
             if (roomName.equals("Radniční náměstí")) {
                 room.addItem(new Item("Mapka"));
             } else if (roomName.equals("Muzeum")) {
@@ -33,7 +33,7 @@ public class World {
             } else if (roomName.equals("Měšťanské Domy")) {
                 room.addItem(new Item("Kniha"));
             }
-
+*/
             if (parts.length > 1 && !parts[1].trim().isEmpty()) {
                 String northRoom = parts[1].trim();
                 Room sever = rooms.computeIfAbsent(northRoom, k -> new Room(k));
@@ -54,6 +54,12 @@ public class World {
                 Room zapad = rooms.computeIfAbsent(westRoom, k -> new Room(k));
                 room.setExit("zapad", zapad);
             }
+            for (int i = 5; i < parts.length; i++) {
+                String itemName = parts[i].trim();
+                if (!itemName.isEmpty()) {
+                    room.addItem(new Item(itemName));
+                }
+            }
         }
         reader.close();
 
@@ -63,7 +69,13 @@ public class World {
         rooms.get("Židovské Suburbium").addNPC(new NPC("Archeolog", new Quest("Ahoj tady máš krabici, tu dones nějakému cizincovi")));
         rooms.get("Měšťanské Domy").addNPC(new NPC("Tajemný cizinec", new Quest("Dones mi Krabici")));
 
+        /*rooms.get("Muzeum").addItem(new Item("Kniha"));
+        rooms.get("Radniční náměstí").addItem(new Item("Mapka"));
+        rooms.get("Krypta").addItem(new Item("Prsten"));
+        rooms.get("Hradby").addItem(new Item("Mec"));
+        rooms.get("Židovské Suburbium").addItem(new Item("Klic"));
 
+         */
     }
 }
 
