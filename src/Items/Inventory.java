@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Inventory {
     private List<Item> items = new ArrayList<>();
-    private final int MAX_ITEMS = 3; // Maximální počet itemů
+    private final int MAX_ITEMS = 3;
 
     public boolean addItem(Item item) {
         if (items.size() < MAX_ITEMS) {
@@ -15,6 +15,10 @@ public class Inventory {
             System.out.println("Inventář je plný!");
             return false;
         }
+    }
+
+    public void removeItem() {
+        items.clear();
     }
 
     public void showInventory() {

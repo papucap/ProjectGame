@@ -21,19 +21,7 @@ public class World {
 
             String roomName = parts[0].trim();
             Room room = rooms.computeIfAbsent(roomName, k -> new Room(k));
-/*
-            if (roomName.equals("Radniční náměstí")) {
-                room.addItem(new Item("Mapka"));
-            } else if (roomName.equals("Muzeum")) {
-                room.addItem(new Item("Zlatý prsten"));
-            } else if (roomName.equals("Hradby")) {
-                room.addItem(new Item("Meč"));
-            } else if (roomName.equals("Krypta")) {
-                room.addItem(new Item("Starý klíč"));
-            } else if (roomName.equals("Měšťanské Domy")) {
-                room.addItem(new Item("Kniha"));
-            }
-*/
+
             if (parts.length > 1 && !parts[1].trim().isEmpty()) {
                 String northRoom = parts[1].trim();
                 Room sever = rooms.computeIfAbsent(northRoom, k -> new Room(k));
@@ -63,19 +51,13 @@ public class World {
         }
         reader.close();
 
-        rooms.get("Muzeum").addNPC(new NPC("Starý kronikář", new Quest("Potřebuje donést zlatý prsten")));
-        rooms.get("Hradby").addNPC(new NPC("Místní obchodník", new Quest("Dones mi prosím Medailon")));
-        rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("Bez se podívat do židovského suburbia")));
-        rooms.get("Židovské Suburbium").addNPC(new NPC("Archeolog", new Quest("Ahoj tady máš krabici, tu dones nějakému cizincovi")));
-        rooms.get("Měšťanské Domy").addNPC(new NPC("Tajemný cizinec", new Quest("Dones mi Krabici")));
+        rooms.get("Muzeum").addNPC(new NPC("Starý kronikář", new Quest("Ahoj, Dojdi se podívat do lokace Krypta, tam zjistíš informace o tom, co je potřeba abys mi odevzdal správné věci")));
+        rooms.get("Hradby").addNPC(new NPC("Místní obchodník", new Quest("Zdravím nabizím ti tento krásný Meč, chceš si ho vzít?")));
+        rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("Zdravím, vítej v Bardejove, mám pro tebe důležitý úkol, dojdi se zeptat Kronikáře do Muzea ten ti řekne víc.")));
+        rooms.get("Židovské Suburbium").addNPC(new NPC("Archeolog", new Quest("Koukej na ten krásný starý Klíč, určitě by se ti hodil.")));
+        rooms.get("Měšťanské Domy").addNPC(new NPC("Tajemný cizinec", new Quest("Narovinu, nechceš tenhle kompas bráško.")));
 
-        /*rooms.get("Muzeum").addItem(new Item("Kniha"));
-        rooms.get("Radniční náměstí").addItem(new Item("Mapka"));
-        rooms.get("Krypta").addItem(new Item("Prsten"));
-        rooms.get("Hradby").addItem(new Item("Mec"));
-        rooms.get("Židovské Suburbium").addItem(new Item("Klic"));
 
-         */
     }
 }
 

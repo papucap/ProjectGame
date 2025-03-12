@@ -2,7 +2,6 @@ package Command;
 
 import Game.Movement;
 import Game.Room;
-import Game.Console;
 import Items.Inventory;
 import Items.Item;
 
@@ -17,15 +16,14 @@ public class PickItem implements Command {
 
     @Override
     public String execute() {
-        Room currentRoom = movement.getCurrentRoom(); // Získání aktuální místnosti
+        Room currentRoom = movement.getCurrentRoom();
 
-        System.out.println("Aktuální místnost: " + currentRoom.name); // Debug výpis
-        System.out.println("Položky v místnosti: " + currentRoom.items.size()); // Debug výpis
+        System.out.println("Aktuální místnost: " + currentRoom.name);
+
 
         if (!currentRoom.items.isEmpty()) {
             Item itemToTake = currentRoom.items.get(0);
             if (inventory.addItem(itemToTake)) {
-                currentRoom.removeItem(itemToTake);
                 return "Vzal jsi " + itemToTake + " z místnosti.";
             } else {
                 return "Inventář je plný, nemůžeš vzít " + itemToTake + ".";

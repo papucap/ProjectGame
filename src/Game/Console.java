@@ -22,6 +22,7 @@ public class Console {
         map.put("pohyb", new Move(movement));
         map.put("inventar", new ShowInventory(inventory));
         map.put("vezmi", new PickItem(inventory, movement));
+        map.put("odstranit", new DeleteInventory(inventory));
     }
 
     private Scanner scanner = new Scanner(System.in);
@@ -50,9 +51,7 @@ public class Console {
         }
     }
 
-    public Room getCurrentRoom() {
-        return movement.getCurrentRoom();
-    }
+
 
 
 }

@@ -13,13 +13,13 @@ public class Room {
     public String name;
     Map<String, Room> exits;
     List<NPC> npcs;
-    public List<Item> items; // Seznam itemů v místnosti
+    public List<Item> items;
 
     public Room(String name) {
         this.name = name;
         this.exits = new HashMap<>();
         this.npcs = new ArrayList<>();
-        this.items = new ArrayList<>(); // Inicializace seznamu itemů
+        this.items = new ArrayList<>();
     }
 
     public void setExit(String direction, Room room) {
@@ -35,11 +35,11 @@ public class Room {
     }
 
     public void addItem(Item item) {
-        items.add(item); // Přidání itemu do místnosti
+        items.add(item);
     }
 
     public boolean removeItem(Item item) {
-        return items.remove(item); // Odebrání itemu z místnosti
+        return items.remove(item);
     }
 
 

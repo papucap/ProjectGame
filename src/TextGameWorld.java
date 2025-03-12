@@ -1,6 +1,6 @@
 import Game.Console;
 import Game.Movement;
-import Game.Room;
+
 import Items.Inventory;
 
 public class TextGameWorld {
