@@ -2,6 +2,7 @@ package Game;
 
 import Command.*;
 import Items.Inventory;
+import java.io.*;
 
 import java.util.HashMap;
 import java.util.Scanner;
@@ -11,6 +12,7 @@ public class Console {
     private HashMap<String, Command> map = new HashMap<>();
     private Inventory inventory;
     private Movement movement;
+    private Console console;
 
     public Console(Inventory inventory, Movement movement) {
         this.inventory = inventory;
@@ -24,6 +26,7 @@ public class Console {
         map.put("vezmi", new PickItem(inventory, movement));
         map.put("odstranit", new DeleteInventory(inventory));
         map.put("odevzdat", new Finish(inventory, movement));
+        map.put("info", new Info(movement));
     }
 
     private Scanner scanner = new Scanner(System.in);
@@ -53,6 +56,5 @@ public class Console {
     }
 
 
-
-
 }
+

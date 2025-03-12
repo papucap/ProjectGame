@@ -59,7 +59,6 @@ public class World {
         rooms.get("Kúpele").addNPC(new NPC("Starosta", new Quest("Ahoj, určitě jsi se přišel kvůli věcem, které musíš donést do Muzea, znám jen jednu a tu najdeš v Kryptu, Hodně Štěstí")));
         rooms.get("Krypta").addNPC(new NPC("???", new Quest("Doporučuju jít nejjižněji v tomto městě.")));
 
-
     }
 }
 

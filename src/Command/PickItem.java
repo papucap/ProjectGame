@@ -24,7 +24,7 @@ public class PickItem implements Command {
         if (!currentRoom.items.isEmpty()) {
             Item itemToTake = currentRoom.items.get(0);
             if (inventory.addItem(itemToTake)) {
-                return "Vzal jsi " + itemToTake + " z místnosti.";
+                return " Vzal jsi " + itemToTake + " z místnosti.";
             } else {
                 return "Inventář je plný, nemůžeš vzít " + itemToTake + ".";
             }

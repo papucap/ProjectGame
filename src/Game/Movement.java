@@ -1,5 +1,7 @@
 package Game;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -10,8 +12,9 @@ public class Movement {
     private boolean firstMove = true;
 
 
-    public Movement() {
+    public Movement(World world) {
         try {
+            this.world = world;
             world = new World();
             world.loadWorld("world.csv");
             currentRoom = world.rooms.get("Radniční náměstí");
@@ -32,7 +35,8 @@ public class Movement {
         Scanner scanner = new Scanner(System.in);
 
         if (firstMove) {
-            System.out.println("Vítej ve světě! Nacházíš se v místnosti: " + currentRoom.name);
+            System.out.println("Vítej ve světě!");
+            System.out.println(" ");
             currentRoom.describeRoom();
             firstMove = false;
         }
@@ -57,7 +61,19 @@ public class Movement {
     }
     public Room getCurrentRoom(){
         return currentRoom;
-    } 
+    }
+
+    public String read(String file){
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            System.out.println("Chyba při čtení souboru: " + e.getMessage());
+        }
+        return file;
+    }
     
 }
 
