@@ -51,11 +51,13 @@ public class World {
         }
         reader.close();
 
-        rooms.get("Muzeum").addNPC(new NPC("Starý kronikář", new Quest("Ahoj, Dojdi se podívat do lokace Krypta, tam zjistíš informace o tom, co je potřeba abys mi odevzdal správné věci")));
+        rooms.get("Muzeum").addNPC(new NPC("Starý kronikář", new Quest("Ahoj, Dojdi se podívat do lokace Kúpele, tam zjistíš informace o tom, co je potřeba abys mi odevzdal správné věci")));
         rooms.get("Hradby").addNPC(new NPC("Místní obchodník", new Quest("Zdravím nabizím ti tento krásný Meč, chceš si ho vzít?")));
-        rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("Zdravím, vítej v Bardejove, mám pro tebe důležitý úkol, dojdi se zeptat Kronikáře do Muzea ten ti řekne víc.")));
+        rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("Zdravím, vítej v Bardejove, mám pro tebe důležitý úkol, dojdi se zeptat Kronikáře do Muzea ten ti řekne víc. Taky hledej nějakýho divnýho cizince.")));
         rooms.get("Židovské Suburbium").addNPC(new NPC("Archeolog", new Quest("Koukej na ten krásný starý Klíč, určitě by se ti hodil.")));
         rooms.get("Měšťanské Domy").addNPC(new NPC("Tajemný cizinec", new Quest("Narovinu, nechceš tenhle kompas bráško.")));
+        rooms.get("Kúpele").addNPC(new NPC("Starosta", new Quest("Ahoj, určitě jsi se přišel kvůli věcem, které musíš donést do Muzea, znám jen jednu a tu najdeš v Kryptu, Hodně Štěstí")));
+        rooms.get("Krypta").addNPC(new NPC("???", new Quest("Doporučuju jít nejjižněji v tomto městě.")));
 
 
     }
