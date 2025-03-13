@@ -26,8 +26,8 @@ public class Console {
         map.put("vezmi", new PickItem(inventory, movement));
         map.put("odstranit", new DeleteInventory(inventory));
         map.put("odevzdat", new Finish(inventory, movement));
-        map.put("info", new Info(movement));
-        map.put("prikazy", new InfoCommand(movement));
+        map.put("napoveda", new Info(movement));
+        map.put("info", new InfoCommand(movement));
     }
 
     private Scanner scanner = new Scanner(System.in);

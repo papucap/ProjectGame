@@ -25,5 +25,8 @@
    - Popis: Dokončí hru, pokud máte správné předměty v inventáři.
    - Použití: Použijte, když chcete hru dokončit a máte potřebné předměty.
 
-7. info
-   - ZOBRAZENÍ TÉTO NÁPOVĚDY
+7. napoveda
+   - ZOBRAZENÍ NÁPOVĚDY
+
+8. prikazy
+   - ZOBRAZENÍ VŠECH PŘÍKAZŮ
