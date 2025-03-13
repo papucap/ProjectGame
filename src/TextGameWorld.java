@@ -10,6 +10,7 @@ public class TextGameWorld {
         World world = new World();
         Movement movement = new Movement(world);
         Console c = new Console(inventory, movement);
+        System.out.println(movement.read("info.txt"));
         c.start();
     }
 }

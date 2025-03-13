@@ -72,7 +72,7 @@ public class Movement {
         } catch (IOException e) {
             System.out.println("Chyba při čtení souboru: " + e.getMessage());
         }
-        return file;
+        return " ";
     }
     
 }

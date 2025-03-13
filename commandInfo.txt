@@ -1,0 +1,29 @@
+
+🔷COMMANDY🔷
+
+1. exit
+   - Popis: Ukončí hru.
+   - Použití: Použijte, když chcete hru ukončit.
+
+2. pohyb
+   - Popis: Umožňuje pohyb mezi místnostmi (sever, jih, zapad, vychod).
+   - Použití: Použijte, když chcete změnit místnost.
+
+3. inventar
+   - Popis: Zobrazí aktuální obsah inventáře.
+   - Použití: Použijte, když chcete zkontrolovat, co máte v inventáři.
+
+4. vezmi
+   - Popis: Vezme předmět z aktuální místnosti do inventáře.
+   - Použití: Použijte, když chcete vzít předmět, který je v místnosti.
+
+5. odstranit
+   - Popis: Odstraní všechny předměty z inventáře.
+   - Použití: Použijte, když chcete vyprázdnit inventář.
+
+6. odevzdat
+   - Popis: Dokončí hru, pokud máte správné předměty v inventáři.
+   - Použití: Použijte, když chcete hru dokončit a máte potřebné předměty.
+
+7. info
+   - ZOBRAZENÍ TÉTO NÁPOVĚDY

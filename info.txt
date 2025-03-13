@@ -1,33 +1,9 @@
-Napoveda ke hre:
-Tvým cílem je aby jsi do určité místnosti donesli přesné předměty které zjistíte od NPC které se nacházejí v lokacích.
-Hra skončí při použití commandu odevzdat.
-!!!Upozornění: Inventar se smaze cely ne jen cast inventare!!!
-Itemy z místností nezmizí, pokud se vám to napoprvé nepovede, itemy můžete vzít znovu v dané místnosti,
 
-COMMANDY:
-1. exit
-   - Popis: Ukončí hru.
-   - Použití: Použijte, když chcete hru ukončit.
+>>>>> ❓ Napoveda ke hre ❓ <<<<<
 
-2. pohyb
-   - Popis: Umožňuje pohyb mezi místnostmi (sever, jih, zapad, vychod).
-   - Použití: Použijte, když chcete změnit místnost.
+--> Tvým cílem je aby jsi do určité místnosti donesli přesné předměty které zjistíte od NPC které se nacházejí v lokacích.
+--> Hra skončí při použití commandu odevzdat.
+❗❗❗ Upozornění: Inventar se smaze cely ❗❗❗
+--> Itemy z místností nezmizí, pokud se vám to napoprvé nepovede, itemy můžete vzít znovu v dané místnosti.
 
-3. inventar
-   - Popis: Zobrazí aktuální obsah inventáře.
-   - Použití: Použijte, když chcete zkontrolovat, co máte v inventáři.
-
-4. vezmi
-   - Popis: Vezme předmět z aktuální místnosti do inventáře.
-   - Použití: Použijte, když chcete vzít předmět, který je v místnosti.
-
-5. odstranit
-   - Popis: Odstraní všechny předměty z inventáře.
-   - Použití: Použijte, když chcete vyprázdnit inventář.
-
-6. odevzdat
-   - Popis: Dokončí hru, pokud máte správné předměty v inventáři.
-   - Použití: Použijte, když chcete hru dokončit a máte potřebné předměty.
-
-6. info
-   - ZOBRAZENÍ TÉTO NÁPOVĚDY
+❗❗❗ Pro vysvetleni prikazu napis: "prikazy" ❗❗❗
