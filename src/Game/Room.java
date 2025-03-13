@@ -43,17 +43,16 @@ public class Room {
 
     public void describeRoom() {
         System.out.println(" ");
-        System.out.println("Nacházíš se v: " + name);
+        System.out.println("📍Nacházíš se v: " + name + "📍");
         if (!npcs.isEmpty()) {
-            System.out.println(" ");
-            System.out.println("V této lokaci jsou následující postavy:");
+            System.out.println("🧙‍♂️️V této lokaci jsou následující postavy:🧙‍");
             for (NPC npc : npcs) {
-                System.out.println("- " + npc.getName() + ": " + npc.getQuestDescription());
+                System.out.println("- " + npc.getName() + ":\n" + npc.getQuestDescription());
             }
         }
         if (!items.isEmpty()) {
             System.out.println(" ");
-            System.out.println("V této místnosti jsou následující itemy:");
+            System.out.println("💎V této místnosti jsou následující itemy:💎");
             for (Item item : items) {
                 System.out.println("- " + item);
                 System.out.println(" ");

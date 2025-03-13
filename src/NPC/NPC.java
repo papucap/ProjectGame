@@ -9,10 +9,6 @@ public class NPC {
         this.quest = quest;
     }
 
-    public void interact() {
-        System.out.println(name + ": " + quest.getDescription());
-    }
-
     public String getName() {
         return name;
     }

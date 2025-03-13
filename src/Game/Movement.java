@@ -36,7 +36,6 @@ public class Movement {
 
         if (firstMove) {
             System.out.println("Vítej ve světě!");
-            System.out.println(" ");
             currentRoom.describeRoom();
             firstMove = false;
         }
