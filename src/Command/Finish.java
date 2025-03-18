@@ -17,14 +17,14 @@ public class Finish implements Command {
 
         Room currentRoom = movement.getCurrentRoom();
 
-
         if (currentRoom.name.equals("Muzeum")) {
 
-            if (inventory.items.size() == 3 &&
-                    inventory.items.stream().anyMatch(item -> item.name.equals("Kompas")) &&
-                    inventory.items.stream().anyMatch(item -> item.name.equals("Prsten")) &&
-                    inventory.items.stream().anyMatch(item -> item.name.equals("Klic"))) {
+            if (inventory.items.stream().anyMatch(item -> item.name.equals("Kompas🧭")) &&
+                    inventory.items.stream().anyMatch(item -> item.name.equals("Prsten💍")) &&
+                    inventory.items.stream().anyMatch(item -> item.name.equals("Klic🗝"))) {
+
                 inventory.removeItem();
+                System.exit(0);
                 return "Hra byla dohrána!";
             }
         }
