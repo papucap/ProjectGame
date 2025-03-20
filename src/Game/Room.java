@@ -12,7 +12,7 @@ import java.util.Map;
 public class Room {
     public String name;
     Map<String, Room> exits;
-    List<NPC> npcs;
+    public List<NPC> npcs;
     public List<Item> items;
 
     public Room(String name) {
