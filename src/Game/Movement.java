@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Movement {
     private World world;
-    private Room currentRoom;
+    public Room currentRoom;
 
     private boolean firstMove = true;
 

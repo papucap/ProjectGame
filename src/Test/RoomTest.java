@@ -5,7 +5,6 @@ import Items.Item;
 import NPC.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
@@ -42,12 +41,13 @@ public class RoomTest {
     }
 
     @Test
-    public void testSetExitAndGetExit() {
-        Room nextRoom = new Room("Next Room");
+    public void testSetAndGetRoomExit() {
+        Room room = new Room("Room A");
+        Room nextRoom = new Room("Room B");
+
         room.setExit("north", nextRoom);
 
         assertEquals(nextRoom, room.getExit("north"));
         assertNull(room.getExit("south"));
     }
-
 }
