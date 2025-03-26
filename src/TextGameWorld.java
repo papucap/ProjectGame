@@ -4,6 +4,10 @@ import Game.Movement;
 import Game.World;
 import Items.Inventory;
 
+/**
+ * Hlavní třída pro spuštění textové hry.
+ */
+
 public class TextGameWorld {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();

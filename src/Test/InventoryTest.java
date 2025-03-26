@@ -5,8 +5,14 @@ import Items.Item;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testovací třída pro Inventory.
+ */
 class InventoryTest {
 
+    /**
+     * Testuje, zda se do plného inventáře nedá přidat další položka.
+     */
     @Test
     public void testInventoryFull() {
         Inventory inventory = new Inventory();
@@ -21,6 +27,9 @@ class InventoryTest {
     }
 
 
+    /**
+     * Testuje, zda se položky z inventáře správně odstraňují.
+     */
     @Test
     public void testRemoveItemsFromInventory() {
         Inventory inventory = new Inventory();

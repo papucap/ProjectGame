@@ -7,6 +7,9 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Třída pro interakci s uživatelským rozhraním konzole.
+ */
 public class Console {
     private boolean exit = false;
     private HashMap<String, Command> map = new HashMap<>();
@@ -19,6 +22,9 @@ public class Console {
         this.movement = movement;
     }
 
+    /**
+     * Inicializuje příkazy pro konzoli.
+     */
     public void inicialization(){
         map.put("exit", new Quit());
         map.put("pohyb", new Move(movement));
@@ -32,6 +38,9 @@ public class Console {
 
     private Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Zpracovává příkazy z konzole.
+     */
     public void doCommand(){
         System.out.print(">>");
         String command = scanner.nextLine();
@@ -44,7 +53,9 @@ public class Console {
         }
     }
 
-
+    /**
+     * Spouští konzoli a zpracovává příkazy, dokud není ukončena.
+     */
     public void start(){
         inicialization();
         try{

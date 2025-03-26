@@ -1,5 +1,8 @@
 package NPC;
 
+/**
+ * Třída reprezentující nehratelnou postavu (NPC) ve hře.
+ */
 public class NPC {
     String name;
     Quest quest;
@@ -9,10 +12,16 @@ public class NPC {
         this.quest = quest;
     }
 
+    /**
+     * Vrací název NPC.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Vrací popis úkolu, který NPC nabízí.
+     */
     public String getQuestDescription() {
         return quest.getDescription();
     }

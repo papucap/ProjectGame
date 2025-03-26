@@ -5,6 +5,9 @@ import Game.Room;
 import Items.Inventory;
 import Items.Item;
 
+/**
+ * Příkaz pro vyzvednutí položky z místnosti.
+ */
 public class PickItem implements Command {
     private Inventory inventory;
     private Movement movement;

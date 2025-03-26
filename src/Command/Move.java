@@ -1,7 +1,9 @@
 package Command;
 import Game.*;
 
-
+/**
+ * Příkaz pro pohyb mezi místnostmi.
+ */
 public class Move implements Command{
     private Movement movement;
 

@@ -3,6 +3,9 @@ package Command;
 import Items.Inventory;
 import Items.Item;
 
+/**
+ * Příkaz pro odstranění všech položek z inventáře.
+ */
 public class DeleteInventory implements Command {
     private Inventory inventory;
 

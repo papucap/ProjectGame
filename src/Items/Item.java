@@ -1,5 +1,8 @@
 package Items;
 
+/**
+ * Třída reprezentující položku ve hře.
+ */
 public class Item {
     public String name;
 

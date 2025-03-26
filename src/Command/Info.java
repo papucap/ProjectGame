@@ -1,8 +1,10 @@
 package Command;
 
-import Game.Console;
 import Game.Movement;
 
+/**
+ * Příkaz pro zobrazení informací o hře.
+ */
 public class Info implements Command {
 
     Movement movement;

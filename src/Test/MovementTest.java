@@ -7,12 +7,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Testovací třída pro Movement.
+ */
 public class MovementTest {
 
     private Movement movement;
     private Room roomA;
     private Room roomB;
 
+    /**
+     * Před každým testem se nastaví nový svět a místnosti.
+     */
     @BeforeEach
     public void setUp() {
         World world = new World();
@@ -23,6 +29,9 @@ public class MovementTest {
         movement.currentRoom = roomA;
     }
 
+    /**
+     * Testuje, zda se správně vrací aktuální místnost.
+     */
     @Test
     public void testGetCurrentRoom() {
         assertEquals(roomA, movement.getCurrentRoom());
@@ -30,6 +39,9 @@ public class MovementTest {
         assertEquals(roomB, movement.getCurrentRoom());
     }
 
+    /**
+     * Testuje, zda se správně pohybuje do další místnosti.
+     */
     @Test
     public void testMoveToNextRoom() {
         movement.currentRoom = roomA;

@@ -5,6 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Třída pro pohyb mezi místnostmi ve hře.
+ */
 public class Movement {
     private World world;
     public Room currentRoom;
@@ -27,6 +30,9 @@ public class Movement {
         }
     }
 
+    /**
+     * Provádí pohyb do další místnosti.
+     */
     public void movement() {
         if (currentRoom == null) {
             return;
@@ -58,10 +64,19 @@ public class Movement {
             System.out.println("Tam se jít nedá!");
         }
     }
+
+    /**
+     * Vrací aktuální místnost.
+     *
+     * @return aktuální místnost.
+     */
     public Room getCurrentRoom(){
         return currentRoom;
     }
 
+    /**
+     * Čte obsah souboru a vypisuje ho na konzoli.
+     */
     public String read(String file){
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;

@@ -2,6 +2,9 @@ package Command;
 
 import Game.Movement;
 
+/**
+ * Příkaz pro zobrazení informací o příkazech.
+ */
 public class InfoCommand implements Command {
     Movement movement;
 

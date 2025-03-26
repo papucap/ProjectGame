@@ -2,6 +2,9 @@ package Command;
 
 import Items.Inventory;
 
+/**
+ * Příkaz pro zobrazení obsahu inventáře.
+ */
 public class ShowInventory implements Command {
     private Inventory inventory;
 

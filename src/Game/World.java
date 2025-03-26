@@ -8,9 +8,19 @@ import Items.Item;
 import NPC.NPC;
 import NPC.Quest;
 
+/**
+ * Třída reprezentující svět hry, který obsahuje místnosti.
+ */
 public class World {
     Map<String, Room> rooms = new HashMap<>();
 
+    /**
+     * Načítá svět z CSV souboru.
+     *
+     * @throws IOException pokud dojde k chybě při čtení souboru.
+     *
+     * ZDROJ: .computeifAbsent -> https://www.baeldung.com/java-map-computeifabsent
+     */
     public void loadWorld(String filename) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filename));
         String line;
@@ -51,6 +61,7 @@ public class World {
         }
         reader.close();
 
+        //Pridani NPC do mistnosti
         rooms.get("Muzeum").addNPC(new NPC("Starý kronikář", new Quest("👋Ahoj👋, Dojdi se podívat do lokace Kúpele, tam zjistíš informace o tom \n co je potřeba abys mi odevzdal správné věci")));
         rooms.get("Hradby").addNPC(new NPC("Místní obchodník", new Quest("👋Zdravím👋 nabizím ti tento krásný Meč, chceš si ho vzít?")));
         rooms.get("Radniční náměstí").addNPC(new NPC("Strážce baziliky", new Quest("👋Zdravím👋, vítej v Bardejove, mám pro tebe výzvu \nDojdi se zeptat Kronikáře do Muzea ten ti řekne víc. \nTaky hledej nějakýho divnýho cizince.")));

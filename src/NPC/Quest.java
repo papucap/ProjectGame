@@ -1,5 +1,8 @@
 package NPC;
 
+/**
+ * Třída reprezentující úkol ve hře.
+ */
 public class Quest {
     private String description;
 
@@ -7,6 +10,9 @@ public class Quest {
         this.description = description;
     }
 
+    /**
+     * Vrací popis úkolu.
+     */
     public String getDescription(){
         return description;
     }

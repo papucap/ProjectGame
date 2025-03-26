@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Třída reprezentující místnost ve hře.
+ */
 public class Room {
     public String name;
     Map<String, Room> exits;
@@ -22,25 +25,39 @@ public class Room {
         this.items = new ArrayList<>();
     }
 
+    /**
+     * Nastavuje výstup do jiné místnosti.
+     */
     public void setExit(String direction, Room room) {
         exits.put(direction, room);
     }
 
+    /**
+     * Vrací místnost, do které vede výstup.
+     */
     public Room getExit(String direction) {
         return exits.get(direction);
     }
 
+    /**
+     *  Přidává NPC do místnosti.
+     */
     public void addNPC(NPC npc) {
         npcs.add(npc);
     }
 
+    /**
+     * Přidává položku do místnosti.
+     */
     public void addItem(Item item) {
         items.add(item);
     }
 
 
 
-
+    /**
+     * Popisuje aktuální místnost a její obsah.
+     */
     public void describeRoom() {
         System.out.println(" ");
         System.out.println("📍Nacházíš se v: " + name + "📍");

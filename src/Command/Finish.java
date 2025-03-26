@@ -3,6 +3,9 @@ import Game.Movement;
 import Game.Room;
 import Items.Inventory;
 
+/**
+ * Příkaz pro dokončení hry.
+ */
 public class Finish implements Command {
     private Inventory inventory;
     private Movement movement;

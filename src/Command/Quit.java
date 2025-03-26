@@ -1,5 +1,8 @@
 package Command;
 
+/**
+ * Příkaz pro ukončení hry.
+ */
 public class Quit implements Command {
     @Override
     public String execute() {
